@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paulo Oliveira | Backend Developer</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #111827;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --accent: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+        }
+
+        .profile-info h1 {
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell;
+            background: linear-gradient(180deg, #020617, var(--bg));
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 32px 16px;
+        }
+
+        header {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 32px;
+
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            margin: 0;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            max-width: 720px;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .badge {
+            background: rgba(56, 189, 248, .15);
+            color: var(--accent);
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: .85rem;
+        }
+
+        section {
+            margin-top: 32px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: rgba(17, 24, 39, .8);
+            border: 1px solid rgba(255, 255, 255, .06);
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            margin: 0 0 8px;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        a.btn {
+            text-decoration: none;
+            color: #020617;
+            background: var(--accent);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        a.link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a.link:hover {
+            text-decoration: underline;
+        }
+
+        span.email {
+            margin: 0px 10px;
+        }
+
+        footer {
+            margin-top: 48px;
+            color: var(--muted);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <img src="img/paulo.jpg" alt="Paulo Oliveira" class="profile-photo" />
+                <div class="profile-info">
+                    <h1>Paulo Oliveira</h1>
+                    <p class="subtitle">
+                        Desenvolvedor <strong>Backend</strong> (Java / Spring Boot) com foco em
+                        regras de negócio, integrações e APIs REST. Experiência com autenticação, envio de e-mails,
+                        WebSocket, Micro serviços, Messageria e frontend como apoio.
+                    </p>
+                </div>
+            </div>
+
+            <div class="badges">
+                <span class="badge">Java</span>
+                <span class="badge">Spring Boot</span>
+                <span class="badge">REST</span>
+                <span class="badge">Spring Cloud</span>
+                <span class="badge">RabbitMQ</span>
+                <span class="badge">WebSocket</span>
+                <span class="badge">OAuth</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">Postgres</span>
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS3</span>
+                <span class="badge">TailwindCSS</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">React / Next.js</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>Principais Projetos</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Safira</h3>
+                    <p class="meta">Backend Java • Spring Boot • REST • React/Next • TailwindCSS</p>
+                    <p>Aplicação fullstack desenvolvida para simular um ambiente real de recrutamento, onde candidatos
+                        podem
+                        criar perfis profissionais e empresas podem buscar talentos e publicar vagas com base em filtros
+                        por
+                        qualificações e formação.</p>
+                    <div class="actions">
+                        <a class="btn" target="_blank"
+                            href="https://github.com/PaulosdOliveira/Safira-Back-End">Back-end</a>
+                        <a class="btn" target="_blank" href="#">Front-end</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Livraria</h3>
+                    <p class="meta">Spring Boot • REST </p>
+                    <p>API REST desenvolvida para gerenciamento e venda de livros, onde administradores podem cadastrar
+                        autores e livros e usuários podem buscar e comprar livros. O projeto foi construído em Java com
+                        Spring Boot, com foco em regras de negócio, organização em camadas e fluxo de compra, simulando
+                        um
+                        cenário real de aplicação backend..</p>
+                    <div class="actions">
+                        <a class="btn" target="_blank"
+                            href="https://github.com/PaulosdOliveira/Livraria-api">Repositório</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contato</h2>
+            <p>Email: <span class="email">paulotricardo@outlook.com</span> • GitHub: <a class="link"
+                    href="https://github.com/PaulosdOliveira" target="_blank">Meu perfil</a></p>
+        </section>
+
+        <footer>
+            <p>© <span id="year"></span> Paulo Oliveira</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
